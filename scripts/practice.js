@@ -32,48 +32,69 @@
 //     }
 // }
 
-let students=[
-    {
-        fistname:"David",
-        lastname:"Desilvey",
-        age:29,
-        isactive:true
-    },
-    {
-        fistname:"David",
-        lastname:"Desilvey",
-        age:29,
-        isactive:true
-    },
-    {
-        fistname:"David",
-        lastname:"Desilvey",
-        age:29,
-        isactive:false,
-        hobbies:["working out", "growing mushrooms"],
-        address:{
-            street:"greencrest",
-            zip:"92045",
-            number:"2343",
-        }
-    }
-];
+// let students=[
+//     {
+//         fistname:"David",
+//         lastname:"Desilvey",
+//         age:29,
+//         isactive:true
+//     },
+//     {
+//         fistname:"David",
+//         lastname:"Desilvey",
+//         age:29,
+//         isactive:true
+//     },
+//     {
+//         fistname:"David",
+//         lastname:"Desilvey",
+//         age:29,
+//         isactive:false,
+//         hobbies:["working out", "growing mushrooms"],
+//         address:{
+//             street:"greencrest",
+//             zip:"92045",
+//             number:"2343",
+//         }
+//     }
+// ];
 
-console.log(students[0].fistname)
+//object constructor
 
-function displaystudent(){
-    //travel the array 
-    let tmp="";
-
-    for(let i=0;i<students.length; i++){
-        tmp +=`<li> ${students[i].fistname}</li>`;
-    console.log(tmp);
-
-        document.getElementById("students").innerHTML=tmp 
-    }
-
+function students(fname,lname,age,isactive){
+    this.firstnem=fname;
+    this.lastname=lname;
+    this.age=age;
+    this.isactive=isactive;
 }
-displaystudent();
+
+let student1=new students("David","Desilvey","29","true");
+let student2= new students("David","Desilvey","29","true")
+
+
+console.log(student1,student2);
+
+
+
+
+
+
+
+//console.log(students[0].fistname)
+
+// function displaystudent(){
+//     //travel the array 
+//     let tmp="";
+
+//     for(let i=0;i<students.length; i++){
+//         tmp +=`<li> ${students[i].fistname}</li>`;
+//     console.log(tmp);
+
+//         document.getElementById("students").innerHTML=tmp 
+//     }
+
+// }
+// displaystudent();
 
 // let p = document.createElement("p");
 // console.log(p);
