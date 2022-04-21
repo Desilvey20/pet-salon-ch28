@@ -45,7 +45,7 @@ let petsalon = {
 
 console.log(petsalon);
 
-function pets(name,age,gender,breed,service,ownername,contact){
+function pet(name,age,gender,breed,service,ownername,contact){
     this.name=name;
     this.age=age;
     this.gender=gender;
@@ -55,8 +55,56 @@ function pets(name,age,gender,breed,service,ownername,contact){
     this.contact=contact;
 
 }
+//get the info from the inputs and store the information
+let inputName=document.getElementById("txtName");
+let inputAge=document.getElementById("txtAge");
+let inputGender=document.getElementById("txtGender");
+let inputBreed=document.getElementById("txtBreed");
+let inputService=document.getElementById("txtService");
+let inputOwner=document.getElementById("txtOwner");
+let inputContact=document.getElementById("txtContact");
 
-let Scooby = new pets("Scooby","2","boxer","male","grooming","Bella","760-555-555");
-let Enrique = new pets("Enrique","3","mixed","male","grooming","David","555-555-5555")
+function isValid(aPet){
+    let valid=true;
+    if(aPet.name.length==0){
+        valid=false
+        console.error("Invalid name")
+    }
+    if(aPet.service.length==0){
+        valid=false;
+        console.error("Invalid name")
+    }
+    if(aPet.phone.length){
+        valid=false;
+        console.error("Invalid name")
+    }
 
-console.log(Scooby,Enrique);
+    return valid;
+}
+
+function register(){
+    //create the pet
+let thePet = new pet(inputName.Value,inputAge.Value,inputGender.Value,inputBreed.Value,inputService.Value,inputOwner.Value,inputContact.Value);
+
+console.log(thePet)
+    //push the pet into the array
+    petsalon.pets.push(thePet);
+    //clear the inputs
+    displayCards();
+    clearinputs();
+}
+
+function clearinputs(){
+    inputName.Value="";
+    inputAge.Value="";
+    inputGender.Value="";
+    inputBreed.Value="";
+    inputService.Value="";
+    inputOwner.Value="";
+    inputContact.Value="";
+}
+
+ let Scooby = new pet("Scooby",2,"boxer","male","grooming","Bella","760-555-555");
+let Enrique = new pet("Enrique",3,"mixed","male","grooming","David","555-555-5555");
+
+petsalon.pets.push(Scooby,Enrique);
