@@ -84,7 +84,7 @@ function isValid(aPet){
 
 function register(){
     //create the pet
-let thePet = new pet(inputName.Value,inputAge.Value,inputGender.Value,inputBreed.Value,inputService.Value,inputOwner.Value,inputContact.Value);
+let thePet = new pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputOwner.value,inputContact.value);
 
 console.log(thePet)
     //push the pet into the array
@@ -95,16 +95,17 @@ console.log(thePet)
 }
 
 function clearinputs(){
-    inputName.Value="";
-    inputAge.Value="";
-    inputGender.Value="";
-    inputBreed.Value="";
-    inputService.Value="";
-    inputOwner.Value="";
-    inputContact.Value="";
+    inputName.value="";
+    inputAge.value="";
+    inputGender.value="";
+    inputBreed.value="";
+    inputService.value="";
+    inputOwner.value="";
+    inputContact.value="";
 }
 
  let Scooby = new pet("Scooby",2,"boxer","male","grooming","Bella","760-555-555");
 let Enrique = new pet("Enrique",3,"mixed","male","grooming","David","555-555-5555");
 
 petsalon.pets.push(Scooby,Enrique);
+displayCards();

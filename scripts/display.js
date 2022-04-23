@@ -31,14 +31,23 @@ function displayCards(){
     let tmp="";
     for(let i=0;i<petsalon.pets.length;i++){
         let pet = petsalon.pets[i];
-        tmp=`
+        tmp+=`
         <div class="pet">
         <h4>${pet.name}</h4>
-        <label>${pet.age}</label>
+        <label>Age:${pet.age}</label>
+        <label>Gender:${pet.gender}</label>
+        <label>Breed:${pet.breed}</label>
+        <label>Owner:${pet.owner}</label>
+        <label>Contact Owner:${pet.contact}</label>
         </div>
         `;
-    }
+    
     document.getElementById("pets").innerHTML=tmp;
+    }
 }
 
 //display the pets in table
+
+
+
+

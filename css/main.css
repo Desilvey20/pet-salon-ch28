@@ -9,3 +9,9 @@ header.site-header{
 .form-container div{
     margin-bottom: 1rem;
 }
+
+.pet{
+    color: blue;
+    background-color: rgb(2, 17, 17);
+    
+}
