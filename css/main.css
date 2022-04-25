@@ -9,9 +9,30 @@ header.site-header{
 .form-container div{
     margin-bottom: 1rem;
 }
-
+#pets{
+    display: flex;
+}
 .pet{
-    color: blue;
-    background-color: rgb(2, 17, 17);
-    
+    display: grid;
+    justify-content: space-between;
+    border-style: solid;
+    margin-left: 10px;
+    color: rgb(22, 142, 189);
+    background-color: rgb(205, 224, 152);
+}
+.pet label{
+    display: block;
+}
+
+.pet .pet-header{
+    display: flex;
+    justify-content: space-between;
+}
+.pet .pet-header button{
+    font-size: 12px;
+    border: none;
+}
+
+.highlight{
+    border:3px solid rgb(241, 4, 4);
 }
